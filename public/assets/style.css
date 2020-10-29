@@ -1,0 +1,111 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: consolas;
+    background-color: #000000;
+}
+
+h1 {
+    text-align: center;
+    padding: 20px 0;
+    color: white;
+}
+
+.section-todo-list {
+    padding: 20px;
+}
+
+#todo-list {
+   border: 1px solid;
+   display: flex;
+   flex-direction: column;
+   padding: 20px;
+   border-radius: 5px;
+}
+
+#todo-list form {
+    width: 40%;
+    display: flex;
+    position: relative;
+    margin: auto;
+}
+
+#todo-list form input {
+    width: 80%;
+    height: 40px;
+    text-indent: 10px;
+    outline: none;
+    font-size: 18px;
+    letter-spacing: 1px;
+}
+
+#todo-list form input[name="input-tasks"] {
+    border: 1px solid #000;
+}
+
+#todo-list form button[type="submit"] {
+    height: 42px;
+    width: 20%;
+    border: none;
+    outline: none;
+    background-color: rgb(27, 25, 25);
+    color: #fff;
+    letter-spacing: 1px;
+    border-radius: 0 5px 5px 0;
+    position: absolute;
+    right: 1px;
+    cursor: pointer;
+}
+
+#todo-list h2 {
+    text-transform: uppercase;
+    padding-bottom: 10px;
+    color: white;
+}
+
+#todo-list ul {
+    border: 1px solid;
+    padding: 5px;
+}
+
+#todo-list ul li {
+    list-style: none;
+    border-top: 1px solid;
+    border-left: 1px solid;
+    border-right: 1px solid;
+    padding: 10px 0 10px 35px;
+    text-transform: capitalize;
+    cursor: pointer;
+    position: relative;
+    color: white;
+}
+
+#todo-list ul li:hover {
+    text-decoration: line-through;
+    transition: 1s;
+}
+
+#todo-list ul li:last-child {
+    border-bottom: 1px solid;
+}
+
+#todo-list ul li:hover::before {
+    content: 'bỏ';
+    position: absolute;
+    right: 20px;
+    font-weight: bold;
+}
+
+#todo-list ul #not-task:hover {
+    text-decoration: none;
+}
+
+#todo-list ul #not-task:hover::before {
+    content: '';
+}
+
+
+
